@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class BodySpriteScript : MonoBehaviour {
 
+
+	public AudioClip bumpSound;
+
 	private Rigidbody2D rb;
+	private AudioSource source;
 
 	// Use this for initialization
 	void Start () {
 	    rb = GetComponent<Rigidbody2D> ();
+		source = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -24,4 +29,11 @@ public class BodySpriteScript : MonoBehaviour {
 			
 
 	}
+
+	void OnCollisionEnter2D (Collision2D coll){
+		float vol = Random.Range (.5f, 1f);
+		source.PlayOneShot (bumpSound, vol);
+
+	}
+
 }

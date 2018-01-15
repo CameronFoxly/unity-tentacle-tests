@@ -6,7 +6,6 @@ public class PlayerControlScript : MonoBehaviour {
 
 	public float speed;
 	public float jumpPower;
-	public AudioClip bumpSound;
 	public AudioClip jumpSound;
 	public GameObject sprite;
 
@@ -68,8 +67,7 @@ public class PlayerControlScript : MonoBehaviour {
 		//if (coll.gameObject.tag == "Ground") {
 			
 			onGround = true;
-		float vol = Random.Range (.5f, 1f);
-		source.PlayOneShot (bumpSound, vol);
+	
 
 		//}
 
