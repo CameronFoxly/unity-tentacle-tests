@@ -8,6 +8,7 @@ public class PlayerControlScript : MonoBehaviour {
 	public float jumpPower;
 	public AudioClip jumpSound;
 	public GameObject sprite;
+	public float spriteScalar;
 
 	private Rigidbody2D rb;
 	private float h;
@@ -15,6 +16,7 @@ public class PlayerControlScript : MonoBehaviour {
 	public bool onGround;
 	private AudioSource source;
 	private Rigidbody2D spriteRB;
+	private SpringJoint2D spriteSpring;
 
 
 	// Use this for initialization
@@ -23,6 +25,7 @@ public class PlayerControlScript : MonoBehaviour {
 		onGround = false;
 		source = GetComponent<AudioSource> ();
 		spriteRB = sprite.GetComponent<Rigidbody2D> ();
+		spriteSpring = sprite.GetComponent<SpringJoint2D> ();
 	}
 		
 
@@ -31,8 +34,8 @@ public class PlayerControlScript : MonoBehaviour {
 	void FixedUpdate () {
 		//Debug.Log (onGround);
 
-		//h = Input.GetAxis ("Horizontal");
-		h = Input.acceleration.x*5f;
+		h = Input.GetAxis ("Horizontal");
+		//h = Input.acceleration.x*5f;
 		v = Input.GetAxis ("Vertical");
 
 		rb.AddForce (new Vector2 (h * speed, 0));
@@ -41,15 +44,19 @@ public class PlayerControlScript : MonoBehaviour {
 
 			spriteRB.drag = 1;
 			spriteRB.mass = .03f;
+			spriteSpring.frequency = 1;
 			
-			if (Input.touchCount == 1) {
-			//if (v == 1) {
+			//if (Input.touchCount == 2) {
+			if (Input.GetKey(KeyCode.UpArrow)) {
 				onGround = false;
 				float vol2 = Random.Range (.5f, 1f);
 				source.PlayOneShot (jumpSound, vol2);
 				spriteRB.drag = 0;
 				spriteRB.mass = .001f;
+				spriteSpring.frequency = 3;
 				rb.AddForce (new Vector2 (h* speed, jumpPower));
+				spriteRB.AddForce(new Vector2(h* speed / spriteScalar, jumpPower/ spriteScalar));
+
 			}
 		}
 

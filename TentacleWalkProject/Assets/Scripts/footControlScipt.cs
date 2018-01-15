@@ -60,7 +60,8 @@ public class footControlScipt : MonoBehaviour {
 		//Debug.Log (footCallNumber);
 
 		randomNum = Random.Range (.7f, 1.1f);
-		h = Input.acceleration.x*5f;
+		//h = Input.acceleration.x*5f;
+		h = Input.GetAxis("Horizontal");
 		v = Input.GetAxis ("Vertical");
 
 		//if you are in the air;
@@ -76,8 +77,8 @@ public class footControlScipt : MonoBehaviour {
 
 		if (onGround == true) {
 			//What to do if you hit jump.
-			if (Input.touchCount == 1) {
-			//if (v == 1) {
+			//if (Input.touchCount == 2) {
+			if (Input.GetKey(KeyCode.UpArrow)) {
 				onGround = false;
 				isMoving = false;
 				//rb.drag = 0;
@@ -124,7 +125,7 @@ public class footControlScipt : MonoBehaviour {
 					
 
 					//What to do if the current foot is on the ground, and within the bounds, but the guy comes to a full stop. Resetting the feet positions to comfortable.
-					if (Mathf.Abs(bodySpriteRB.velocity.x) < speedThreshold) {
+					if (Mathf.Abs(bodyControlRB.velocity.x) < speedThreshold) {
 						
 						isMoving = true;
 						startingPos = rb.transform.position;
@@ -181,5 +182,6 @@ public class footControlScipt : MonoBehaviour {
 		source.PlayOneShot (footStepSound, vol);
 		//}
 	}
+
 }
 

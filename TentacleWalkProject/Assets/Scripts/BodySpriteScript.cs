@@ -6,7 +6,10 @@ public class BodySpriteScript : MonoBehaviour {
 
 
 	public AudioClip bumpSound;
+	public float jumpPower;
+	public GameObject playerControl;
 
+	private PlayerControlScript playerControlScript;
 	private Rigidbody2D rb;
 	private AudioSource source;
 
@@ -14,23 +17,25 @@ public class BodySpriteScript : MonoBehaviour {
 	void Start () {
 	    rb = GetComponent<Rigidbody2D> ();
 		source = GetComponent<AudioSource> ();
+		playerControlScript = playerControl.GetComponent<PlayerControlScript> ();
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
 		//Debug.Log (rb.velocity);
 		rb.rotation =  -rb.velocity.x * 4f;
 
-		//if (Input.GetKey (KeyCode.DownArrow)) {
-		if (Input.touchCount == 2) {
+
+		if (Input.GetKey (KeyCode.DownArrow) && playerControlScript.onGround == true) {
+		//if (Input.touchCount == 1) {
 			rb.AddForce (new Vector2 (0, -1f));
 		}
 			
 
 	}
 
-	void OnCollisionEnter2D (Collision2D coll){
+	void OnCollisionEnter2D(Collision2D coll) {
 		float vol = Random.Range (.5f, 1f);
 		source.PlayOneShot (bumpSound, vol);
 

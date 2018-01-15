@@ -1652,6 +1652,7 @@ MonoBehaviour:
   jumpPower: 10000
   jumpSound: {fileID: 8300000, guid: 1d6c18a8b0bce4f138081b21c4221e7e, type: 3}
   sprite: {fileID: 1837110985}
+  spriteScalar: 8000
   onGround: 0
 --- !u!82 &1528195462
 AudioSource:
@@ -2028,7 +2029,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb213d5f1e3b40169c3296a854cd6f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bumpSound: {fileID: 0}
+  bumpSound: {fileID: 8300000, guid: 7f0e120bb05284a3b9098592cc6fe723, type: 3}
+  jumpPower: 0.1
+  playerControl: {fileID: 1528195457}
 --- !u!82 &1837110992
 AudioSource:
   m_ObjectHideFlags: 0
