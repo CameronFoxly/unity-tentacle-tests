@@ -82,7 +82,8 @@ public class footControlScipt : MonoBehaviour {
 				onGround = false;
 				isMoving = false;
 				//rb.drag = 0;
-				rb.AddForce (new Vector2 (h * speed, jumpPower));
+				rb.velocity = bodyControlRB.velocity;
+				rb.AddForce (new Vector2 (h * speed*40, jumpPower));
 
 			}
 		}
@@ -173,14 +174,14 @@ public class footControlScipt : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
-		//if(coll.gameObject.tag == "Ground"){
-		rb.velocity = new Vector2 (0, 0);
-		onGround = true;
-		isMoving = false;
-		moveAmount = 0;
+		if(coll.gameObject.tag == "Ground"){
+			rb.velocity = new Vector2 (0, 0);
+			onGround = true;
+			isMoving = false;
+			moveAmount = 0;
+		}
 		float vol = Random.Range (.05f, .2f);
 		source.PlayOneShot (footStepSound, vol);
-		//}
 	}
 
 }

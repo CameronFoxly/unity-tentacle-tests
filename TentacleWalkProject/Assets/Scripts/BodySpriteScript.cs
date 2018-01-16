@@ -36,8 +36,11 @@ public class BodySpriteScript : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
-		float vol = Random.Range (.5f, 1f);
-		source.PlayOneShot (bumpSound, vol);
+
+	
+			float vol = Random.Range (.5f, 1f);
+			source.PlayOneShot (bumpSound, vol);
+
 
 	}
 
