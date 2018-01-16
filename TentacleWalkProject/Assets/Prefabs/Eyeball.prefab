@@ -383,7 +383,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -402,7 +402,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Positions:
   - {x: -0.14660001, y: 0.7, z: 1}
   - {x: -0.14660001, y: 1.1139853, z: 1}
@@ -420,9 +420,9 @@ LineRenderer:
         tangentMode: 0
       - serializedVersion: 2
         time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
+        value: 0.20548248
+        inSlope: -0.30076504
+        outSlope: -0.30076504
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -477,7 +477,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -496,7 +496,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Positions:
   - {x: -0.0666, y: 0.65999997, z: 1}
   - {x: -0.0666, y: 1.0739852, z: 1}
@@ -514,9 +514,9 @@ LineRenderer:
         tangentMode: 0
       - serializedVersion: 2
         time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
+        value: 0.20548248
+        inSlope: -0.30076504
+        outSlope: -0.30076504
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -571,7 +571,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -590,7 +590,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Positions:
   - {x: -0.29659998, y: 0.6, z: 1}
   - {x: -0.29659998, y: 1.0139853, z: 1}
@@ -608,9 +608,9 @@ LineRenderer:
         tangentMode: 0
       - serializedVersion: 2
         time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
+        value: 0.20548248
+        inSlope: -0.30076504
+        outSlope: -0.30076504
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -665,7 +665,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -684,7 +684,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Positions:
   - {x: -0.2266, y: 0.64, z: 1}
   - {x: -0.2266, y: 1.0539852, z: 1}
@@ -702,9 +702,9 @@ LineRenderer:
         tangentMode: 0
       - serializedVersion: 2
         time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
+        value: 0.20548248
+        inSlope: -0.30076504
+        outSlope: -0.30076504
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
