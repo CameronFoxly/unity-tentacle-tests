@@ -53,7 +53,7 @@ public class PlayerControlScript : MonoBehaviour {
 				source.PlayOneShot (jumpSound, vol2);
 				spriteRB.drag = 0;
 				spriteRB.mass = .001f;
-				spriteSpring.frequency = 3;
+				spriteSpring.frequency = 2;
 				rb.AddForce (new Vector2 (h* speed, jumpPower));
 				spriteRB.AddForce(new Vector2(h* speed / spriteScalar, jumpPower/ spriteScalar));
 

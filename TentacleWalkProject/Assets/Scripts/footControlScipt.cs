@@ -16,6 +16,7 @@ public class footControlScipt : MonoBehaviour {
 	public float distanceThreshold;
 	public float speedThreshold;
 	public float defaultDistance;
+	public float comfortWaitTime;
 
 	private AudioSource source;
 	private float stepSpeed;
@@ -72,7 +73,8 @@ public class footControlScipt : MonoBehaviour {
 		if (onGround == false) {
 			isMoving = false;
 			rb.drag = 0;
-			rb.AddForce (new Vector2 (h * speed, 0));
+			rb.velocity = bodyControlRB.velocity; 
+			//rb.AddForce (new Vector2 (h * speed, 0));
 	
 
 		}
@@ -80,6 +82,7 @@ public class footControlScipt : MonoBehaviour {
 		//WHAT HAPPENS ONCE FOOT TOUCHES THE GROUND. First check from jump button.
 
 		if (onGround == true) {
+
 			//What to do if you hit jump.
 			//if (Input.touchCount == 2) {
 			if (Input.GetKey(KeyCode.UpArrow)) {
@@ -111,7 +114,7 @@ public class footControlScipt : MonoBehaviour {
 				//What to do once the foot is flat on the ground. These things set once for the begenning of the step.
 	
 				if (isMoving == false) {
-					distanceFromCenter = Vector3.Distance (gameObject.transform.position, BodySprite.transform.position);  
+					distanceFromCenter = Vector3.Distance (gameObject.transform.position, bodyControlRB.transform.position);  
 					
 					//What to do if the current foot is too far center and needs to adjust.
 					if (distanceFromCenter > maxDistance) {
@@ -141,15 +144,16 @@ public class footControlScipt : MonoBehaviour {
 
 					//What to do if the current foot is on the ground, and within the bounds, but the guy comes to a full stop. Resetting the feet positions to comfortable.
 					if (Mathf.Abs(bodyControlRB.velocity.x) < speedThreshold) {
-						
+					
+
 						isMoving = true;
 						startingPos = rb.transform.position;
 						centerMarkX = bodyControlRB.position.x;
 						//stepSpeed = Random.Range (1f, 4f);
 						
 						footDestination = new Vector3 ((centerMarkX - (defaultDistance * 2)) + (defaultDistance * footCallNumber), rb.transform.position.y, 0);
-
-
+						
+						
 
 					}
 
@@ -186,6 +190,7 @@ public class footControlScipt : MonoBehaviour {
 		}
 
 	}
+		
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		if(coll.gameObject.tag == "Ground"){
