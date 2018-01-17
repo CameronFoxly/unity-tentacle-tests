@@ -8,6 +8,7 @@ public class BodySpriteScript : MonoBehaviour {
 	public AudioClip bumpSound;
 	public float jumpPower;
 	public GameObject playerControl;
+	public AudioClip groundBump;
 
 	private PlayerControlScript playerControlScript;
 	private Rigidbody2D rb;
@@ -37,10 +38,14 @@ public class BodySpriteScript : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll) {
 
-	
-			float vol = Random.Range (.5f, 1f);
+			float vol = Random.Range (.3f, .6f);
+		if (coll.gameObject.tag == "Wall") {
 			source.PlayOneShot (bumpSound, vol);
+		}
 
+		if (coll.gameObject.tag == "Ground") {
+			source.PlayOneShot (groundBump, vol);
+		}
 
 	}
 

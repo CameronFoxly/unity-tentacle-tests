@@ -2135,6 +2135,7 @@ MonoBehaviour:
   bumpSound: {fileID: 8300000, guid: 7f0e120bb05284a3b9098592cc6fe723, type: 3}
   jumpPower: 0.1
   playerControl: {fileID: 1528195457}
+  groundBump: {fileID: 8300000, guid: ff7b5d47bfa7a4611abe50b4f730c86d, type: 3}
 --- !u!82 &1837110992
 AudioSource:
   m_ObjectHideFlags: 0
