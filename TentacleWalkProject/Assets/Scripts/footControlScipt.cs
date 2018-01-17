@@ -29,7 +29,6 @@ public class footControlScipt : MonoBehaviour {
 	private float distanceFromCenter;
 	private Vector3 footDestination;
 	private int direction;
-	private bool isMoving;
 	private float moveAmount;
 	private Vector3 startingPos;
 	private float moveX;
@@ -37,7 +36,8 @@ public class footControlScipt : MonoBehaviour {
 	private float randomNum;
 	private float centerMarkX;
 
-	private bool onGround;
+	public bool isMoving;
+	public bool onGround;
 	//private bool bodyOnGround;
 
 	// Use this for initialization
@@ -52,6 +52,7 @@ public class footControlScipt : MonoBehaviour {
 		bodyControlRB = BodyController.GetComponent<Rigidbody2D>(); 
 		rb.drag = 15;
 		rb.mass = 20;
+		randomNum = Random.Range (.7f, 1.1f);
 		//bodyOnGround = BodyController.GetComponent<PlayerControlScript>().onGround;
 	}
 	
@@ -64,10 +65,15 @@ public class footControlScipt : MonoBehaviour {
 		maxDistance = 2;
 		stepDistance = 3;
 		defaultDistance = .5f;
-		randomNum = Random.Range (.7f, 1.1f);
 		//h = Input.acceleration.x*5f;
 		h = Input.GetAxis("Horizontal");
 		v = Input.GetAxis ("Vertical");
+
+		//This is the fix the error that was happening when feet got stuck in the ground and both onGround and isMoving would be set to true at the same time.
+		//if (onGround == true && isMoving == true) {
+		//	isMoving = false;
+		//}
+			
 
 		//if you are in the air;
 		if (onGround == false) {
@@ -85,7 +91,7 @@ public class footControlScipt : MonoBehaviour {
 
 			//What to do if you hit jump.
 			//if (Input.touchCount == 2) {
-			if (Input.GetKey(KeyCode.UpArrow)) {
+			if (Input.GetKey(KeyCode.UpArrow) || Input.touchCount == 2) {
 				onGround = false;
 				isMoving = false;
 				//rb.drag = 0;
@@ -94,8 +100,8 @@ public class footControlScipt : MonoBehaviour {
 			}
 
 			//if (Input.touchCount == 1) {
-			if (Input.GetKey (KeyCode.DownArrow)) {
-				maxDistance = 2;
+			if (Input.GetKey (KeyCode.DownArrow) || Input.touchCount == 1) {
+				maxDistance = 2.5f;
 				stepDistance = 4;
 				defaultDistance = .8f;
 
@@ -106,15 +112,16 @@ public class footControlScipt : MonoBehaviour {
 		}
 			
 
+
 		if (onGround == true) {
 				rb.drag = 0;
 				rb.mass = 20;
-
+				distanceFromCenter = Vector3.Distance (gameObject.transform.position, bodyControlRB.transform.position);
 
 				//What to do once the foot is flat on the ground. These things set once for the begenning of the step.
 	
 				if (isMoving == false) {
-					distanceFromCenter = Vector3.Distance (gameObject.transform.position, bodyControlRB.transform.position);  
+					//distanceFromCenter = Vector3.Distance (gameObject.transform.position, bodyControlRB.transform.position);  
 					
 					//What to do if the current foot is too far center and needs to adjust.
 					if (distanceFromCenter > maxDistance) {
@@ -175,6 +182,8 @@ public class footControlScipt : MonoBehaviour {
 					}
 					
 					if (isMoving == true) {
+
+					//Here is the actual movement function on the step. 
 					if (Mathf.Abs(rb.transform.position.x - footDestination.x) >= distanceThreshold) { 
 							moveX = Mathf.Lerp (startingPos.x, footDestination.x, moveAmount);
 							moveY = startingPos.y + (stepSpeed/ 5f) * stepHeight * Mathf.Sin (moveAmount * Mathf.PI) * randomNum;
@@ -199,6 +208,7 @@ public class footControlScipt : MonoBehaviour {
 			isMoving = false;
 			moveAmount = 0;
 		}
+		randomNum = Random.Range (.7f, 1f);
 		float vol = Random.Range (.05f, .2f);
 		source.PlayOneShot (footStepSound, vol);
 	}
