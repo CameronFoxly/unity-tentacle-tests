@@ -15,6 +15,7 @@ public class footControlScipt : MonoBehaviour {
 	public float footCallNumber;
 	public float distanceThreshold;
 	public float speedThreshold;
+	public float defaultDistance;
 
 	private AudioSource source;
 	private float stepSpeed;
@@ -59,6 +60,9 @@ public class footControlScipt : MonoBehaviour {
 		//Debug.Log (isMoving);
 		//Debug.Log (footCallNumber);
 
+		maxDistance = 2;
+		stepDistance = 3;
+		defaultDistance = .5f;
 		randomNum = Random.Range (.7f, 1.1f);
 		//h = Input.acceleration.x*5f;
 		h = Input.GetAxis("Horizontal");
@@ -84,13 +88,23 @@ public class footControlScipt : MonoBehaviour {
 				//rb.drag = 0;
 				rb.velocity = bodyControlRB.velocity;
 				rb.AddForce (new Vector2 (h * speed*40, jumpPower));
+			}
+
+			//if (Input.touchCount == 1) {
+			if (Input.GetKey (KeyCode.DownArrow)) {
+				maxDistance = 2;
+				stepDistance = 4;
+				defaultDistance = .8f;
 
 			}
+
+
+
 		}
 			
 
 		if (onGround == true) {
-				rb.drag = 15;
+				rb.drag = 0;
 				rb.mass = 20;
 
 
@@ -133,7 +147,7 @@ public class footControlScipt : MonoBehaviour {
 						centerMarkX = bodyControlRB.position.x;
 						//stepSpeed = Random.Range (1f, 4f);
 						
-						footDestination = new Vector3 ((centerMarkX - 1f) + (.5f * footCallNumber), rb.transform.position.y, 0);
+						footDestination = new Vector3 ((centerMarkX - (defaultDistance * 2)) + (defaultDistance * footCallNumber), rb.transform.position.y, 0);
 
 
 
@@ -146,7 +160,7 @@ public class footControlScipt : MonoBehaviour {
 				//This is the behavior that happens while the foot is Stepping.
 				if (isMoving == true) {
 					
-					//Resetting things once the foot reaches it's destination.
+				//Resetting things once the foot reaches it's destination.
 				if (Mathf.Abs(rb.transform.position.x - footDestination.x) < distanceThreshold) {
 						
 						isMoving = false;

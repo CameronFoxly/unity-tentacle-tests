@@ -29,7 +29,7 @@ public class BodySpriteScript : MonoBehaviour {
 
 
 		if (Input.GetKey (KeyCode.DownArrow) && playerControlScript.onGround == true) {
-		//if (Input.touchCount == 1) {
+			//if (Input.touchCount == 1 && playerControlScript.onGround == true) {
 			rb.AddForce (new Vector2 (0, -1f));
 		}
 			
