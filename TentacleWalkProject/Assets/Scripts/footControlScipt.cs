@@ -72,11 +72,6 @@ public class footControlScipt : MonoBehaviour {
 		h = Input.acceleration.x*5f;
 		//h = Input.GetAxis("Horizontal");
 		v = Input.GetAxis ("Vertical");
-
-		//This is the fix the error that was happening when feet got stuck in the ground and both onGround and isMoving would be set to true at the same time.
-		//if (onGround == true && isMoving == true) {
-		//	isMoving = false;
-		//}
 			
 
 		//if you are in the air;

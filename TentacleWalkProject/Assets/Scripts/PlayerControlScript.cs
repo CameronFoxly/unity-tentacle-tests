@@ -47,7 +47,7 @@ public class PlayerControlScript : MonoBehaviour {
 			spriteSpring.frequency = 1;
 			
 			//if (Input.touchCount == 2) {
-			if (Input.GetKey(KeyCode.UpArrow)) {
+			if (Input.GetKey(KeyCode.UpArrow) || Input.touchCount == 2) {
 				onGround = false;
 				float vol2 = Random.Range (.5f, 1f);
 				source.PlayOneShot (jumpSound, vol2);
