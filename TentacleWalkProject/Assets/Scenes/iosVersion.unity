@@ -214,7 +214,7 @@ Prefab:
     - target: {fileID: 114799639593027346, guid: 4a78c6cdebffe458b894f158683af843,
         type: 2}
       propertyPath: speedThreshold
-      value: 0.1
+      value: 0.0001
       objectReference: {fileID: 0}
     - target: {fileID: 114799639593027346, guid: 4a78c6cdebffe458b894f158683af843,
         type: 2}
@@ -474,7 +474,7 @@ Prefab:
     - target: {fileID: 114799639593027346, guid: 4a78c6cdebffe458b894f158683af843,
         type: 2}
       propertyPath: speedThreshold
-      value: 0.1
+      value: 0.0001
       objectReference: {fileID: 0}
     - target: {fileID: 114799639593027346, guid: 4a78c6cdebffe458b894f158683af843,
         type: 2}
@@ -926,7 +926,7 @@ Prefab:
     - target: {fileID: 114799639593027346, guid: 4a78c6cdebffe458b894f158683af843,
         type: 2}
       propertyPath: speedThreshold
-      value: 0.1
+      value: 0.0001
       objectReference: {fileID: 0}
     - target: {fileID: 114799639593027346, guid: 4a78c6cdebffe458b894f158683af843,
         type: 2}
@@ -1201,7 +1201,7 @@ Prefab:
     - target: {fileID: 114799639593027346, guid: 4a78c6cdebffe458b894f158683af843,
         type: 2}
       propertyPath: speedThreshold
-      value: 0.1
+      value: 0.0001
       objectReference: {fileID: 0}
     - target: {fileID: 114799639593027346, guid: 4a78c6cdebffe458b894f158683af843,
         type: 2}
@@ -1595,7 +1595,7 @@ Prefab:
     - target: {fileID: 114799639593027346, guid: 4a78c6cdebffe458b894f158683af843,
         type: 2}
       propertyPath: speedThreshold
-      value: 0.1
+      value: 0.0001
       objectReference: {fileID: 0}
     - target: {fileID: 114799639593027346, guid: 4a78c6cdebffe458b894f158683af843,
         type: 2}
