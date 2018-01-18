@@ -231,6 +231,21 @@ Prefab:
       propertyPath: comfortWaitTime
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 50649267828038612, guid: 4a78c6cdebffe458b894f158683af843,
+        type: 2}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50649267828038612, guid: 4a78c6cdebffe458b894f158683af843,
+        type: 2}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799639593027346, guid: 4a78c6cdebffe458b894f158683af843,
+        type: 2}
+      propertyPath: waitTotal
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4a78c6cdebffe458b894f158683af843, type: 2}
   m_IsPrefabParent: 0
@@ -480,6 +495,21 @@ Prefab:
         type: 2}
       propertyPath: comfortWaitTime
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 50649267828038612, guid: 4a78c6cdebffe458b894f158683af843,
+        type: 2}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50649267828038612, guid: 4a78c6cdebffe458b894f158683af843,
+        type: 2}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799639593027346, guid: 4a78c6cdebffe458b894f158683af843,
+        type: 2}
+      propertyPath: waitTotal
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4a78c6cdebffe458b894f158683af843, type: 2}
@@ -938,6 +968,21 @@ Prefab:
       propertyPath: comfortWaitTime
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 50649267828038612, guid: 4a78c6cdebffe458b894f158683af843,
+        type: 2}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50649267828038612, guid: 4a78c6cdebffe458b894f158683af843,
+        type: 2}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799639593027346, guid: 4a78c6cdebffe458b894f158683af843,
+        type: 2}
+      propertyPath: waitTotal
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4a78c6cdebffe458b894f158683af843, type: 2}
   m_IsPrefabParent: 0
@@ -1172,6 +1217,21 @@ Prefab:
         type: 2}
       propertyPath: comfortWaitTime
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 50649267828038612, guid: 4a78c6cdebffe458b894f158683af843,
+        type: 2}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50649267828038612, guid: 4a78c6cdebffe458b894f158683af843,
+        type: 2}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799639593027346, guid: 4a78c6cdebffe458b894f158683af843,
+        type: 2}
+      propertyPath: waitTotal
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4a78c6cdebffe458b894f158683af843, type: 2}
@@ -1555,6 +1615,21 @@ Prefab:
         type: 2}
       propertyPath: comfortWaitTime
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 50649267828038612, guid: 4a78c6cdebffe458b894f158683af843,
+        type: 2}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50649267828038612, guid: 4a78c6cdebffe458b894f158683af843,
+        type: 2}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114799639593027346, guid: 4a78c6cdebffe458b894f158683af843,
+        type: 2}
+      propertyPath: waitTotal
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4a78c6cdebffe458b894f158683af843, type: 2}
