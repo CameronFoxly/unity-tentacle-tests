@@ -34,8 +34,8 @@ public class PlayerControlScript : MonoBehaviour {
 	void FixedUpdate () {
 		//Debug.Log (onGround);
 
-		//h = Input.GetAxis ("Horizontal");
-		h = Input.acceleration.x*5f;
+		h = Input.GetAxis ("Horizontal");
+		//h = Input.acceleration.x*5f;
 		v = Input.GetAxis ("Vertical");
 
 		rb.AddForce (new Vector2 (h * speed, 0));

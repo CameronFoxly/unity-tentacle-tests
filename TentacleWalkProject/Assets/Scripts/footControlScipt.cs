@@ -69,8 +69,8 @@ public class footControlScipt : MonoBehaviour {
 		maxDistance = 2.5f;
 		stepDistance = 3;
 		defaultDistance = .5f;
-		h = Input.acceleration.x*5f;
-		//h = Input.GetAxis("Horizontal");
+		//h = Input.acceleration.x*5f;
+		h = Input.GetAxis("Horizontal");
 		v = Input.GetAxis ("Vertical");
 			
 

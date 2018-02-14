@@ -10,6 +10,7 @@ public class BodySpriteScript : MonoBehaviour {
 	public GameObject playerControl;
 	public AudioClip groundBump;
 
+
 	private PlayerControlScript playerControlScript;
 	private Rigidbody2D rb;
 	private AudioSource source;
@@ -28,8 +29,9 @@ public class BodySpriteScript : MonoBehaviour {
 		rb.rotation =  -rb.velocity.x * 4f;
 
 
-		//if (Input.GetKey (KeyCode.DownArrow) && playerControlScript.onGround == true) {
-			if (Input.touchCount == 1 && playerControlScript.onGround == true) {
+
+		if (Input.GetKey (KeyCode.DownArrow) && playerControlScript.onGround == true) {
+		//	if (Input.touchCount == 1 && playerControlScript.onGround == true) {
 			rb.AddForce (new Vector2 (0, -1f));
 		}
 			
