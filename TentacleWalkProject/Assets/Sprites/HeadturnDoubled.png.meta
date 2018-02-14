@@ -1,14 +1,19 @@
 fileFormatVersion: 2
-guid: 0dc7fab77487246688a9a5aefdec717d
-timeCreated: 1518561097
+guid: b1e64e33813ba430bb5e0dd5e3f752f8
+timeCreated: 1518634895
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Headturn_0
-    21300002: Headturn_1
-    21300004: Headturn_2
-    21300006: Headturn_3
-    21300008: Headturn_4
+    21300000: HeadturnDoubled_0
+    21300002: HeadturnDoubled_1
+    21300004: HeadturnDoubled_2
+    21300006: HeadturnDoubled_3
+    21300008: HeadturnDoubled_4
+    21300010: HeadturnDoubled_5
+    21300012: HeadturnDoubled_6
+    21300014: HeadturnDoubled_7
+    21300016: HeadturnDoubled_8
+    21300018: HeadturnDoubled_9
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -65,8 +70,8 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
+    textureCompression: 0
+    compressionQuality: 100
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
@@ -75,8 +80,8 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
+    textureCompression: 0
+    compressionQuality: 100
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
@@ -85,8 +90,8 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
+    textureCompression: 0
+    compressionQuality: 100
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
@@ -95,8 +100,8 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
+    textureCompression: 0
+    compressionQuality: 100
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
@@ -105,8 +110,8 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
+    textureCompression: 0
+    compressionQuality: 100
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
@@ -115,7 +120,77 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Headturn_0
+      name: HeadturnDoubled_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: HeadturnDoubled_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: HeadturnDoubled_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: HeadturnDoubled_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: HeadturnDoubled_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: HeadturnDoubled_5
       rect:
         serializedVersion: 2
         x: 0
@@ -129,7 +204,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Headturn_1
+      name: HeadturnDoubled_6
       rect:
         serializedVersion: 2
         x: 16
@@ -143,7 +218,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Headturn_2
+      name: HeadturnDoubled_7
       rect:
         serializedVersion: 2
         x: 32
@@ -157,7 +232,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Headturn_3
+      name: HeadturnDoubled_8
       rect:
         serializedVersion: 2
         x: 48
@@ -171,7 +246,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Headturn_4
+      name: HeadturnDoubled_9
       rect:
         serializedVersion: 2
         x: 64

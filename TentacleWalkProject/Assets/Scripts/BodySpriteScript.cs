@@ -26,7 +26,7 @@ public class BodySpriteScript : MonoBehaviour {
 	void FixedUpdate () {
 
 		//Debug.Log (rb.velocity);
-		rb.rotation =  -rb.velocity.x * 4f;
+		//rb.rotation =  -rb.velocity.x * 4f;
 
 
 

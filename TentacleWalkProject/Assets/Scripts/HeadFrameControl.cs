@@ -18,7 +18,9 @@ public class HeadFrameControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		frameNumber = rb.velocity.x + 2;
+		frameNumber = rb.velocity.x + 4.5f;
+
+		anim.SetFloat ("FrameNum", frameNumber);
 
 	}
 }

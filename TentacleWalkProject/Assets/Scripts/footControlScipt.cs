@@ -20,7 +20,7 @@ public class footControlScipt : MonoBehaviour {
 
 	private AudioSource source;
 	private float stepSpeed;
-	private float v;
+private float v;
 	private float h;
 	private Rigidbody2D rb;
 	private Rigidbody2D bodySpriteRB;
