@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HeadFrameControl : MonoBehaviour {
 
-	public Animation anim;
+	public Animator anim;
 	public float frameNumber;
 	public GameObject bodySprite;
 	private Rigidbody2D rb;
@@ -20,6 +20,5 @@ public class HeadFrameControl : MonoBehaviour {
 	void Update () {
 		frameNumber = rb.velocity.x + 2;
 
-		GetComponent<Animation>()["Turn"].time = 2f;
 	}
 }
